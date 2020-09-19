@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Proximity Marketing Using Bluetooth Low Energy</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/StyleSheet.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+    <div class="mainContent">
+        <nav class="navbar navbar-expand-lg navbar-dark p-2 fixed-top bg-dark">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
+                <ul class="navbar-nav mr-5">
+                   <%-- <li class="nav-item">
+                        <a class="nav-link" href="ManageVendors.aspx">Manage Vendors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ManageOffers.aspx">Manage Offers</a>
+                    </li>--%>
+                   <%-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Users
+                        </a>
+                        <div class="dropdown-menu" style="padding: 11px;">
+                            <a class="nav-link" style="color: black;" href="AddUsers.aspx">Add Users</a>
+
+                            <a class="nav-link" style="color: black;" href="ViewUsers.aspx">View Users</a>
+
+                        </div>
+                    </li> --%>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ManageProducts.aspx">Manage Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">Orders
+                        </a>
+                        <div class="dropdown-menu" style="padding: 11px;">
+                            <a class="nav-link" style="color: black;" href="AddOrders.aspx">Add Orders</a>
+
+                            <a class="nav-link" style="color: black;" href="ViewOrders.aspx">View Orders</a>
+
+                        </div>
+                    </li>   
+                    <li class="nav-item">
+                        <a class="nav-link" href="Settings.aspx">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Logout.aspx"><span class="fa fa-sign-in"></span> Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>     
+       
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+    </form>
+  </div>
+
+  <div class="text-right footer" style="background-color:#527b75;">
+	   <p class="footerp">Proximity Marketing Using Bluetooth Low Energy | Your Name</p>
+  </div>
+
+     <script src="js/js1.js"></script>
+
+     <script>
+
+         $(function () {
+
+            $('li a[href^="' + location.pathname.split("/")[1] + '"]').addClass('active');
+         
+        });
+
+        
+    </script>
+
+</body>
+</html>
